@@ -1,0 +1,25 @@
+<html>
+	<form action="/feed">
+	    <input type="submit" value="FEED" />
+	</form>
+	<form action="/load">
+	    <input type="submit" value="advance for load" />
+	</form>
+	<form action="/">
+	    <input type="submit" name="mm" value="adjust +30" />
+	</form>
+	<form action="/">
+	    <input type="submit" name="mmr" value="adjust +30 [remote]" />
+	</form>
+	<form action="/record">
+	    <input type="submit" value="Record Video" />
+	</form>
+<ul>
+<div>
+Previous Feedings:
+{% for file in vid_list %}
+<li><a href="/download/{{ file[0] }}">{{ file[1] }}</a></li>
+{% endfor %}
+</ul>
+
+</html>
